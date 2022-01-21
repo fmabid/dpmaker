@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-const Home = () => import("../components/Home.vue");
-const About = () => import("../components/About.vue");
+const Home = () => import("@/pages/Home.vue");
+const About = () => import("@/pages/About.vue");
 
 const routes = [
   { path: "/", component: Home },
