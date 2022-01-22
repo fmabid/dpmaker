@@ -1,19 +1,28 @@
 <template>
   <div class="relative flex flex-col space-y-10">
     <div class="block mx-auto">
-      <div ref="imageNode">
-        <div class="w-3/4 mx-auto" v-if="imgPath">
-          <img :src="imgPath" />
-          No image
+      <div class="flex flex-row items-center justify-center" ref="imageNode">
+        <div
+          v-if="imgPath"
+          class="w-96 h-96 flex flex-row items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+        >
+          <div class="imgSize mx-auto rounded-full overflow-hidden">
+            <img
+              class="imgSize mx-auto object-cover object-center"
+              :src="imgPath"
+            />
+            No image
+          </div>
         </div>
       </div>
 
       <div id="bar"></div>
 
-      <Uploader @on-uploaded="updateImagePath" />
+      <Uploader class="mt-10" @on-uploaded="updateImagePath" />
     </div>
 
     <button
+      :disabled="!imgPath"
       @click="convertToImage"
       class="bg-lime-400 text-sky-50 px-12 py-2 rounded-lg"
     >
@@ -36,7 +45,7 @@ const imageNode = ref();
 /**
  * Variables
  */
-
+// "https://tailwindcss.com/_next/static/media/classic-utility-jacket.0f108046e151c8576017eaf383406fe6.jpg"
 const imgPath = ref("");
 
 /**
@@ -67,3 +76,10 @@ function download(link: string, name: string) {
   document.body.removeChild(a);
 }
 </script>
+
+<style>
+.imgSize {
+  width: 23rem;
+  height: 23rem;
+}
+</style>

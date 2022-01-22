@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-yellow-100 h-auto w-full px-12">
+  <div class="h-auto w-full px-12 py-4">
     <div class="flex flex-row justify-center items-center">
       <ImageViewer />
     </div>
