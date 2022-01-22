@@ -52,7 +52,7 @@ const imgPath = ref("");
  * Functions
  */
 
-function updateImagePath(file) {
+function updateImagePath(file: any) {
   imgPath.value = URL.createObjectURL(file);
 
   var image = new Image();

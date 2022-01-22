@@ -1,7 +1,7 @@
 <template>
   <div class="block">
-    <div v-bind="getRootProps()">
-      <input v-bind="getInputProps()" />
+    <div v-bind="{ getRootProps: getRootProps() }">
+      <input v-bind="{ getInputProps: getInputProps() }" />
 
       <div
         class="border-2 border-sky-300 border-dashed rounded-lg bg-sky-100 px-12 py-12 text-center"
@@ -22,7 +22,7 @@ const { getRootProps, getInputProps, isDragActive, ...rest } = useDropzone({
   onDrop
 });
 
-function onDrop(acceptFiles, rejectReasons) {
+function onDrop(acceptFiles: Array<any>, rejectReasons: any) {
   //   console.log(acceptFiles);
   //   console.log(rejectReasons);
   emit("onUploaded", acceptFiles[0]);
