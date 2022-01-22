@@ -3,11 +3,13 @@
     <div v-bind="getRootProps()">
       <input v-bind="getInputProps()" />
 
-      <p v-if="isDragActive">Drop the files here ...</p>
-      <p v-else>Drag 'n' drop some files here, or click to select files</p>
+      <div
+        class="border-2 border-sky-300 border-dashed rounded-lg bg-sky-100 px-12 py-12 text-center"
+      >
+        <span v-if="isDragActive">Drop the files here ...</span>
+        <span v-else>Drag 'n' drop image here, or click to select image</span>
+      </div>
     </div>
-
-    <button @click="open">open</button>
   </div>
 </template>
 
@@ -17,10 +19,12 @@ import { useDropzone } from "vue3-dropzone";
 const emit = defineEmits(["onUploaded"]);
 
 const { getRootProps, getInputProps, isDragActive, ...rest } = useDropzone({
-  onDrop,
+  onDrop
 });
 
 function onDrop(acceptFiles, rejectReasons) {
+  //   console.log(acceptFiles);
+  //   console.log(rejectReasons);
   emit("onUploaded", acceptFiles[0]);
 }
 </script>
