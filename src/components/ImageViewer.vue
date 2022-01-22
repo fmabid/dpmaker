@@ -22,6 +22,7 @@
     </div>
 
     <button
+      v-if="imgPath"
       :disabled="!imgPath"
       @click="convertToImage"
       class="bg-lime-400 text-sky-50 px-12 py-2 rounded-lg"
