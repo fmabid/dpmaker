@@ -10,7 +10,8 @@
     "dom-to-image": "^2.6.0",
     "vue": "^3.2.37",
     "vue-router": "4",
-    "vue3-dropzone": "0.0.7"
+    "vue3-dropzone": "0.0.7",
+    "vue3-simple-dropzone": "^1.0.3"
   },
   "devDependencies": {
     "@types/dom-to-image": "^2.6.4",

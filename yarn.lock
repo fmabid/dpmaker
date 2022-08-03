@@ -1033,6 +1033,13 @@ vue3-dropzone@0.0.7:
     attr-accept "^2.2.2"
     file-selector "^0.2.4"
 
+vue3-simple-dropzone@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue3-simple-dropzone/-/vue3-simple-dropzone-1.0.3.tgz#f88664ebadda1e96e3bf7fbcf497059327adbd39"
+  integrity sha512-P/6xGSkqaP4Smj6q0lghv2jVmg6YCbmPMOMPb+Phrg11kvx0Srp+O+++SDgUpkG1b77k1viULS87Z5pCLFklAA==
+  dependencies:
+    vue "^3.2.37"
+
 vue@^3.2.37:
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
