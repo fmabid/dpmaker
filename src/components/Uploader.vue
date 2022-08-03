@@ -4,7 +4,7 @@
       class="border-2 border-sky-300 border-dashed rounded-lg bg-sky-100 text-center"
       @onSelect="handler"
     >
-      <p class="p-12">Click or Drop image here</p>
+      <p class="p-12">Click here or Drop image</p>
     </Dropzone>
   </div>
 </template>
